@@ -1,7 +1,7 @@
 import java.time.LocalDateTime;
 
 public class FlightInformation {
-	
+	//TODO
 	public String flightNumber;
 	public String flightSource;
 	public String flightDestination;

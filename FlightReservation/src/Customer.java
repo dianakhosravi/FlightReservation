@@ -1,6 +1,7 @@
 
 public class Customer {
 	
+	//TODO
 	protected String passportId;
 	protected String firstName;
 	protected String lastName;
