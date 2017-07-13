@@ -1,4 +1,4 @@
-package models;
+package models.reservations;
 import java.time.LocalDateTime;
 
 public class Flight {

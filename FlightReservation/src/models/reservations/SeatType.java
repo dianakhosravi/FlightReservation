@@ -1,4 +1,4 @@
-package models;
+package models.reservations;
 
 public enum SeatType {
 	FIRSTCLASS, ECONOMY;

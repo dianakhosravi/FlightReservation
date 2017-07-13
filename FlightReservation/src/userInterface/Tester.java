@@ -1,7 +1,13 @@
-package models;
+package userInterface;
 
 import java.time.LocalDateTime;
 import java.util.*;
+
+import models.bookingSystem.Ticket;
+import models.food.FoodMenu;
+import models.reservations.Customer;
+import models.reservations.Flight;
+import models.reservations.SeatType;
 
 public class Tester {
 

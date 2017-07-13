@@ -1,5 +1,10 @@
-package models;
+package models.bookingSystem;
 import java.time.LocalDateTime;
+
+import models.food.FoodMenu;
+import models.reservations.Customer;
+import models.reservations.Flight;
+import models.reservations.SeatType;
 
 public class Ticket{
 	//TODO

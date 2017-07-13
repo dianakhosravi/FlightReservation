@@ -1,4 +1,4 @@
-package models;
+package userInterface;
 
 public class CLI {
 

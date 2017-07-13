@@ -1,6 +1,8 @@
-package models;
+package models.food;
 import java.util.ArrayList;
 import java.util.List;
+
+import models.reservations.SeatType;
 
 // Constructor
 public class FoodMenu {

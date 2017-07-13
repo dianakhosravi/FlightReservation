@@ -1,4 +1,4 @@
-package models;
+package models.reservations;
 
 import java.util.HashMap;
 import java.util.Map;

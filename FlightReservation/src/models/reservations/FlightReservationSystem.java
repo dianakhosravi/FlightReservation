@@ -1,9 +1,12 @@
-package models;
+package models.reservations;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Scanner;
+
+import models.food.Food;
+import userInterface.CLI;
 
 public class FlightReservationSystem {
 
