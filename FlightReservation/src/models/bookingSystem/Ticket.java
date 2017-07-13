@@ -1,22 +1,16 @@
 package models.bookingSystem;
-import java.time.LocalDateTime;
 
 import models.food.FoodMenu;
-import models.reservations.Customer;
-import models.reservations.Flight;
-import models.reservations.SeatType;
+import models.reservations.*;
 
 public class Ticket{
 	//TODO
-	protected Customer customer;
-	protected SeatType seat;
-	protected int seatNumber;
-	
+	private Customer customer;
+	private SeatType seat;
+	private int seatNumber;
 	private Flight flight;
 	private FoodMenu food;
-	
-
-	
+		
 	public Ticket(Customer customer, Flight flight, FoodMenu food){
 		this.customer = customer;
 		this.flight = flight;
