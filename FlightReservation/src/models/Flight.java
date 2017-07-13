@@ -1,6 +1,7 @@
+package models;
 import java.time.LocalDateTime;
 
-public class FlightInformation {
+public class Flight {
 	//TODO
 	public String flightNumber;
 	public String flightSource;
@@ -9,7 +10,7 @@ public class FlightInformation {
 	public LocalDateTime flightTime;
 	public final int[] numberOfSeats = new int[10];
 		
-	public FlightInformation(String flightNumber, String flightSource, String flightDestination,
+	public Flight(String flightNumber, String flightSource, String flightDestination,
 			LocalDateTime flightDate, LocalDateTime flightTime) {
 		super();
 		this.flightNumber = flightNumber;
@@ -61,6 +62,12 @@ public class FlightInformation {
 
 	public int[] getSeatNumbers() {
 		return numberOfSeats;
+	}
+	
+	@Override
+	public String toString() {
+
+		return "Flight [flightNumber=" + flightNumber + ", source=" + flightSource + "]";
 	}
 
 
