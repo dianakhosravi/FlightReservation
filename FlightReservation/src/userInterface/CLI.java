@@ -1,6 +1,7 @@
+package userInterface;
 
 public class CLI {
-	
+
 	// 1. Create flight
 	// 2. Add aeroplane
 	// 3. New Customer
@@ -11,7 +12,11 @@ public class CLI {
 	// 8. Print all aeroplanes
 	// 9. Statistics
 	// 10. Economy
-	
+
 	// switch()
 
+//	for(Food f : first.getFoodList()){
+//		System.out.println(f.getFoodName() + " " + f.getFoodPrice());
+//	}
 }
+

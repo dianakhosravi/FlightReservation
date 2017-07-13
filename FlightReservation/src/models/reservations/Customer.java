@@ -1,6 +1,8 @@
-package models;
+package models.reservations;
 import java.util.ArrayList;
 import java.util.List;
+
+import models.food.Food;
 
 public class Customer {
 	

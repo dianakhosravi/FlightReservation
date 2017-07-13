@@ -1,10 +1,13 @@
+package models.food;
+import models.food.Food;
+import models.reservations.SeatType;
 
 public class Tester {
 
 	
 	public static void main(String[] args) {
-		FoodMenu first = new FoodMenu(FoodClass.FIRST_CLASS);
-		FoodMenu economy = new FoodMenu(FoodClass.ECONOMY_CLASS);
+		FoodMenu first = new FoodMenu(SeatType.FIRSTCLASS);
+		FoodMenu economy = new FoodMenu(SeatType.ECONOMY);
 		
 		for(Food f : first.getFoodList()){
 			System.out.println(f.getFoodName() + " " + f.getFoodPrice());

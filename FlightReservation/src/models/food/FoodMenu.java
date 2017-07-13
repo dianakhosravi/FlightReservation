@@ -1,5 +1,9 @@
+package models.food;
 import java.util.ArrayList;
 import java.util.List;
+
+import models.food.Food;
+import models.reservations.SeatType;
 
 // Constructor
 public class FoodMenu {
@@ -14,8 +18,8 @@ public class FoodMenu {
 		this.foodList = foodList;
 	}
 
-	public FoodMenu(FoodClass foodClass) {
-		if (foodClass.equals(FoodClass.ECONOMY_CLASS)) {
+	public FoodMenu(SeatType firstClass) {
+		if (firstClass.equals(FoodClass.ECONOMY_CLASS)) {
 			initalizeEconomyFood();
 		}
 

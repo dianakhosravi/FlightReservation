@@ -1,4 +1,4 @@
-package models;
+package models.reservations;
 public class Seat{
 		private boolean valid;
 		private double price;
