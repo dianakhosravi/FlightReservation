@@ -26,9 +26,4 @@ public class Airplane {
 		this.seats = seats;
 	}
 	
-	
-	
-	
-	
-	
 }
