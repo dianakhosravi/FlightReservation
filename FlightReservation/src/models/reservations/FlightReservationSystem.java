@@ -8,6 +8,7 @@ import java.util.*;
 
 import models.bookingSystem.Ticket;
 import models.food.Food;
+import models.food.FoodMenu;
 import models.reservations.Airplane;
 import userInterface.CLI;
 
@@ -18,6 +19,7 @@ public class FlightReservationSystem {
 	List<Food> allFoodReservations = new ArrayList<>();
 	List<Airplane> allAirplanes = new ArrayList<>();
 	List<Ticket> allTickets = new ArrayList<>();
+	
 	String source, destination, date;
 	String airplaneID, flightNumber;
 	String customerName;
@@ -42,12 +44,15 @@ public class FlightReservationSystem {
 	//Airplane airplane, String flightNumber, String flightSource, String flightDestination,String flightDate
 	void createFlight(String flightNumber, String source, String destination, String date, String airplaneID){
 
+		// Flight(Airplane airplane, String flightNumber, String flightSource, String flightDestination,String flightDate)
 		allFlights.add(new Flight(allAirplanes.get(Integer.parseInt(airplaneID)), flightNumber, source, destination, date));
 
 	}
 
-	void buyTicket(Customer customer, Flight flight, Food food){
-
+	
+	//buyTicket(currentCustomer, allFlights.get(Integer.parseInt(flightNumber)), null);
+	void buyTicket(Customer customer, Flight flight, FoodMenu food){
+		allTickets.add(new Ticket(customer, flight, food));
 	}
 
 
@@ -135,8 +140,8 @@ public class FlightReservationSystem {
 
 				System.out.println("Type in the flight number: ");
 				flightNumber = br.readLine();
-				System.out.println("Type in the customer name: ");
-				customerName = br.readLine();
+//				System.out.println("Type in the customer name: ");
+//				customerName = br.readLine();
 
 				buyTicket(currentCustomer, allFlights.get(Integer.parseInt(flightNumber)), null);
 
@@ -160,10 +165,14 @@ public class FlightReservationSystem {
 				break;
 
 			case "print statistics":
+				
+				printStatistics();
 
 				break;
 
-			case "economy summary":
+			case "business summary":
+				
+				printBusinessSummary();
 
 				break;
 
@@ -192,6 +201,24 @@ public class FlightReservationSystem {
 			}	
 		}
 
+
+	}
+
+	private void printBusinessSummary() {
+		
+		double totalIncome = 0;
+		
+	//	System.out.println("Total income: " + (allTickets.stream().forEach(s-> System.out.println(s))));
+		
+	}
+
+	private void printStatistics() {
+		
+		System.out.println("Number of airplanes in the system: " + allAirplanes.size());
+		System.out.println("Number of customers in the system: " + allCustomers.size());
+		System.out.println("Number of tickets in the system: " + allTickets.size());
+		System.out.println("Number of flights in the system: " + allFlights.size());
+		System.out.println("Number of foodReservations in the system: " + allFoodReservations.size());
 
 	}
 
