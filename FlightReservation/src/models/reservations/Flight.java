@@ -1,23 +1,24 @@
 package models.reservations;
-import java.time.LocalDateTime;
+
 
 public class Flight {
 	//TODO
-	public String flightNumber;
-	public String flightSource;
-	public String flightDestination;
-	public LocalDateTime flightDate;
-	public LocalDateTime flightTime;
-	public final int[] numberOfSeats = new int[10];
+	private String flightNumber;
+	private String flightSource;
+	private String flightDestination;
+	private String flightDate;
+	private Seat seats;
+	Airplane a;
+
 		
-	public Flight(String flightNumber, String flightSource, String flightDestination,
-			LocalDateTime flightDate, LocalDateTime flightTime) {
-		super();
+	public Flight(Airplane airplane, String flightNumber, String flightSource, String flightDestination,String flightDate) {
+
+		a = airplane;
 		this.flightNumber = flightNumber;
 		this.flightSource = flightSource;
 		this.flightDestination = flightDestination;
 		this.flightDate = flightDate;
-		this.flightTime = flightTime;
+	
 	}
 
 	public String getFlightNumber() {
@@ -44,30 +45,31 @@ public class Flight {
 		this.flightDestination = flightDestination;
 	}
 
-	public LocalDateTime getFlightDate() {
+	public String getFlightDate() {
 		return flightDate;
 	}
 
-	public void setFlightDate(LocalDateTime flightDate) {
+	public void setFlightDate(String flightDate) {
 		this.flightDate = flightDate;
 	}
 
-	public LocalDateTime getFlightTime() {
-		return flightTime;
-	}
-
-	public void setFlightTime(LocalDateTime flightTime) {
-		this.flightTime = flightTime;
-	}
-
-	public int[] getSeatNumbers() {
-		return numberOfSeats;
+	public Seat getSeats() {
+		return seats;
 	}
 	
+	
+	public Airplane getA() {
+		return a;
+	}
+
+	public void setA(Airplane a) {
+		this.a = a;
+	}
+
 	@Override
 	public String toString() {
 
-		return "Flight [flightNumber=" + flightNumber + ", source=" + flightSource + "]";
+		return "Flight [ Airplane=" + a + "flightNumber=" + flightNumber + ", source=" + flightSource + "]";
 	}
 
 
