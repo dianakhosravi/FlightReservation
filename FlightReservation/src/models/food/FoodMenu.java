@@ -49,43 +49,6 @@ public class FoodMenu {
 		foodList.add(new Food("Waffles and icecream", 125));
 
 	}
+	
 
 }
-
-//// Variables
-// private String food;
-// private String menu[];
-// private String inventory[];
-// private int cost;
-//
-// public String getFood() {
-// return food;
-// }
-//
-// public String getMenu[] {
-// return menu[];
-// }
-//
-// private void setName(String title, String firstName, String surname) {
-// this.title = title;
-// this.firstName = firstName;
-// this.surname = surname;
-// }
-//
-//// Methods
-// public String getMailingName() {
-// // Code
-// String mailingName;
-// mailingName = title + " " + firstName.substring(0, 1) + " " + surname;
-// return mailingName;
-//
-// }
-//
-// // More methods would appear here.
-//
-// public Customer(String title, String firstName, String surname) {
-// System.out.println("New food order placed.");
-// setName(customer, food,surname);
-// }
-//
-//
