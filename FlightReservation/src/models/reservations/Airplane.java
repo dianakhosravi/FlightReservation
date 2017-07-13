@@ -5,10 +5,13 @@ import java.util.Map;
 
 public class Airplane {
 	
+	private String name;
+	
 
 	private Map<Integer,Seat> seats = new HashMap<Integer,Seat>();
 	
-	public Airplane() {
+	public Airplane(String name) {
+		this.name = name;
 		fillThePlaneWithSeats();
 	}
 	
@@ -25,6 +28,10 @@ public class Airplane {
 
 	public void setSeats(Map<Integer, Seat> seats) {
 		this.seats = seats;
+	}
+
+	public String getName() {
+		return name;
 	}
 	
 }
