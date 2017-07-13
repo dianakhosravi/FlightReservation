@@ -38,7 +38,7 @@ public class FoodMenu {
 	private void initalizeFirstFood() {
 		foodList.add(new Food("Lobster", 450));
 		foodList.add(new Food("Veggieburger deluxe", 250));
-		foodList.add(new Food("Mushroom stew", 125));
+		foodList.add(new Food("Mushroom stew and paked potatoe", 125));
 		foodList.add(new Food("Veggie Sallad", 100));
 		foodList.add(new Food("Lemon Cheesecake", 125));
 		foodList.add(new Food("Strawberry Cheesecake", 125));

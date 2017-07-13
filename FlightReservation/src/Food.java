@@ -3,6 +3,7 @@ public class Food {
 
 	private String foodName;
 	private int foodPrice;
+	public double subTotal;
 	
 	public Food(String foodName, int foodPrice){
 		this.foodName = foodName;
