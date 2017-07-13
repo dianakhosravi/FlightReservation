@@ -1,7 +1,5 @@
 package models.reservations;
-import java.util.ArrayList;
-import java.util.List;
-
+import java.util.*;
 import models.food.Food;
 
 public class Customer {
@@ -17,6 +15,11 @@ public class Customer {
 		selectedFood = new ArrayList<Food>();
 	}
 	
+	public Customer(String name){
+		this.firstName = name;
+		this.passportId ="E00000";
+		selectedFood = new ArrayList<Food>();
+	}
 	
 	
 	public List<Food> getSelectedFood() {
