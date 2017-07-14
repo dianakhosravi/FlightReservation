@@ -27,10 +27,11 @@ public class CLI {
 			System.out.println("5. Reserve Food");
 			System.out.println("6. Print all customers");
 			System.out.println("7. Print all flights");
-			System.out.println("8. Print all aeroplanes");
-			System.out.println("9. Statistics");
-			System.out.println("10. Business summary");
-			System.out.println("11. Exit");
+			System.out.println("8. Print all airplanes");
+			System.out.println("9. Print all tickets");
+			System.out.println("10. Statistics");
+			System.out.println("11. Business summary");
+			System.out.println("12. Exit");
 			System.out.println("-----------------------------------------------");
 			System.out.println("");
 		}

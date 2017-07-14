@@ -29,11 +29,22 @@ public class FlightReservationSystem {
 		allCustomers.removeIf(s-> s.getFirstName().equals(name));
 	}
 
-	void addAirplane(Airplane airplane){
+	/**
+	 * 
+	 * @param airplane
+	 */
+	public void addAirplane(Airplane airplane){
+		
+		System.out.println(airplane.getName());
 		allAirplanes.add(airplane);
-	}
 
-	Customer addCustomer(String name){
+	}
+	/**
+	 * 
+	 * @param name 
+	 * @return Customer
+	 */
+	public Customer addCustomer(String name){
 
 		Customer c = new Customer(name); // Add contructor with only name as a parameter.
 		allCustomers.add(c);
@@ -41,21 +52,24 @@ public class FlightReservationSystem {
 
 	}
 
-	//Airplane airplane, String flightNumber, String flightSource, String flightDestination,String flightDate
-	void createFlight(String flightNumber, String source, String destination, String date, String airplaneID){
+	public Flight createFlight(String flightNumber, String source, String destination, String date, String airplaneID){
 
-		// Flight(Airplane airplane, String flightNumber, String flightSource, String flightDestination,String flightDate)
-		allFlights.add(new Flight(allAirplanes.get(Integer.parseInt(airplaneID)), flightNumber, source, destination, date));
-
+		Flight flight = new Flight(allAirplanes.get(Integer.parseInt(airplaneID)), flightNumber, source, destination, date);
+		allFlights.add(flight);
+		return flight;
 	}
 
 	
-	//buyTicket(currentCustomer, allFlights.get(Integer.parseInt(flightNumber)), null);
-	void buyTicket(Customer customer, Flight flight, FoodMenu food){
-		allTickets.add(new Ticket(customer, flight, food));
+	public Ticket buyTicket(Customer customer, Flight flight, FoodMenu food){
+		Ticket t = new Ticket(customer, flight, food);
+		allTickets.add(t);
+		return t;
 	}
 
-
+/**
+ * 
+ * @throws IOException
+ */
 	public void start() throws IOException{
 
 		CLI cli = new CLI();
@@ -117,7 +131,7 @@ public class FlightReservationSystem {
 
 				break;
 
-			case "add aeroplane": 
+			case "add airplane": 
 				//BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 				String airPlaneName;
 				System.out.println("Type in a name of the airplan: ");
@@ -160,8 +174,12 @@ public class FlightReservationSystem {
 				allFlights.forEach(s-> System.out.println(s));
 				break;
 
-			case "print all aeroplanes": 
+			case "print all airplanes": 
 				allAirplanes.forEach(s-> System.out.println(s));
+				break;
+				
+			case "print all tickets": 
+				allTickets.forEach(s-> System.out.println(s));
 				break;
 
 			case "print statistics":
@@ -177,6 +195,8 @@ public class FlightReservationSystem {
 				break;
 
 			case "delete ticket":
+				
+				
 
 
 				break;
@@ -208,7 +228,9 @@ public class FlightReservationSystem {
 		
 		double totalIncome = 0;
 		
-	//	System.out.println("Total income: " + (allTickets.stream().forEach(s-> System.out.println(s))));
+		//TODO: Print out business summary
+		allTickets.forEach(s-> System.out.println(s.getCustomer()));
+		
 		
 	}
 
